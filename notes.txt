@@ -1,0 +1,4 @@
+Service loads a list of TodoListComponents from json, later from a web service
+
+TodoListViewerComponent constructor uses the service to populate a list of TodoListComponents.
+*NgFor in TodoListViewerComponent renders the child objects
