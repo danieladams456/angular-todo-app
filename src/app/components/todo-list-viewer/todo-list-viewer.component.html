@@ -1,6 +1,11 @@
-<p>
-  Start todo-list-viewer
-  <app-todo-list></app-todo-list>
-  <app-todo-list></app-todo-list>
-  End todo-list-viewer
+<hr/>
+Start todo-list-viewer
+
+<!-- need to use this instead:
+  https://stackoverflow.com/questions/42274281/dynamically-adding-components-in-ngfor
+  https://appendto.com/2016/09/building-nested-components-using-angular-2/ -->
+<p *ngFor="let todoList of todoLists">
+  {{ todoList }}
 </p>
+End todo-list-viewer
+<hr/>

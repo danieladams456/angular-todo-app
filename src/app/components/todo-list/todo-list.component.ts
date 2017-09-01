@@ -9,11 +9,14 @@ import { TodoList } from '../../models/todo-list';
 export class TodoListComponent implements OnInit {
   todoList: TodoList;
 
-  constructor(todoList: TodoList) {
-    this.todoList = todoList;
-   }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  setTodo(todoList: TodoList) {
+    console.log('in setTodo(), setting ', todoList.title);
+    this.todoList = todoList;
+  }
 }
