@@ -1,6 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div class="jumbotron" style="text-align:center">
   <h1>Daniel's ToDo Test App</h1>
 </div>
-<hr/>
+
+<button (click)="authVisibleToggle()">Log In</button>
+<app-authentication *ngIf="authVisible"></app-authentication>
+
 <app-todo-list-viewer></app-todo-list-viewer>
