@@ -7,13 +7,12 @@ import { TodoListDataService } from '../../services/todo-list-data.service';
   templateUrl: './todo-list-viewer.component.html'
   // styleUrls: ['./todo-list-viewer.component.css']
 })
-export class TodoListViewerComponent implements OnInit {
+export class TodoListsViewerComponent implements OnInit {
 
   todoLists: TodoList[] = [];
   constructor(private dataService: TodoListDataService) { }
 
   ngOnInit() {
-    console.log('got here');
     // load the interface model into displayable objects
     this.dataService.getLists().forEach(element => {
       this.todoLists.push(element);

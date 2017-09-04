@@ -2,14 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { TodoListViewerComponent } from './components/todo-list-viewer/todo-list-viewer.component';
+import { TodoListsViewerComponent } from './components/todo-list-viewer/todo-list-viewer.component';
 
 import { TodoListDataService } from './services/todo-list-data.service';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListViewerComponent
+    TodoListsViewerComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule

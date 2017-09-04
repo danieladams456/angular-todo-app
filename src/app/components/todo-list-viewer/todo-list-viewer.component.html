@@ -1,8 +1,1 @@
-<div *ngFor="let todoList of todoLists">
-  <h2>{{ todoList.title }}</h2>
-  <ul>
-    <li *ngFor="let item of todoList.items">
-      {{ item }}
-    </li>
-  </ul>
-</div>
+<app-todo-list *ngFor="let todoList of todoLists" [todoList]="todoList"></app-todo-list>
