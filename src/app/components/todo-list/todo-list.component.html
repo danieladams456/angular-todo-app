@@ -1,6 +1,8 @@
+<div class="col-lg-6 center-text">
 <h2>{{ todoList.title }}</h2>
-<ul>
+<ul class="down-with-dots">
   <li *ngFor="let item of todoList.items">
-    {{ item }}
+      <button type="button" class="btn-primary"><h3>{{ item }}</h3></button>
   </li>
 </ul>
+</div>

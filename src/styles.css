@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.center-text{
+    text-align: center;
+}
+.down-with-dots{
+    list-style-type: none;
+}
+.i-need-space{
+    padding: 20px;
+}
+.btn-size{
+    width: 75px;
+    height: 30px;
+}

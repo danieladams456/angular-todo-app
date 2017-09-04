@@ -6,9 +6,20 @@ import { Component } from '@angular/core';
   // styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  authVisible = false;
+  currentUsername: string;
+  isAuthVisible: boolean;
 
-  authVisibleToggle() {
-    this.authVisible = !this.authVisible;
+  constructor() {
+    this.currentUsername = 'Daniel';
+    this.isAuthVisible = false;
   }
+
+  isAuthVisibleToggle() {
+    this.isAuthVisible = !this.isAuthVisible;
+  }
+
+  onUserChanged(username: string) {
+    this.currentUsername = username;
+  }
+
 }

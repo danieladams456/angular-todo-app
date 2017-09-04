@@ -1,8 +1,11 @@
 <div class="jumbotron" style="text-align:center">
-  <h1>Daniel's ToDo Test App</h1>
+  <h1>{{ currentUsername }}'s ToDo Test App</h1>
 </div>
 
-<button (click)="authVisibleToggle()">Log In</button>
-<app-authentication *ngIf="authVisible"></app-authentication>
+<button (click)="isAuthVisibleToggle()">Log In</button>
 
-<app-todo-list-viewer></app-todo-list-viewer>
+<app-authentication *ngIf="isAuthVisible" (onUserChanged)="currentUsername = $event"></app-authentication>
+
+<div class="row">
+  <app-todo-list-viewer></app-todo-list-viewer>
+</div>
