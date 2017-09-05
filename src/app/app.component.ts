@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor() {
     this.currentUsername = 'Daniel';
-    this.isAuthVisible = false;
+    this.isAuthVisible = true;
   }
 
   isAuthVisibleToggle() {

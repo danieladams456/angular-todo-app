@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TodoListsViewerComponent } from './components/todo-list-viewer/todo-list-viewer.component';
@@ -16,7 +17,8 @@ import { AuthenticationComponent } from './components/authentication/authenticat
     AuthenticationComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [TodoListDataService],
   bootstrap: [AppComponent]
