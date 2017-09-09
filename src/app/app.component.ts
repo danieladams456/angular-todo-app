@@ -10,7 +10,6 @@ export class AppComponent {
   isAuthVisible: boolean;
 
   constructor() {
-    this.currentUsername = 'Daniel';
     this.isAuthVisible = true;
   }
 
@@ -19,7 +18,9 @@ export class AppComponent {
   }
 
   onUserChanged(username: string) {
+    console.log('in root component on user changed method');
     this.currentUsername = username;
+    this.isAuthVisible = username !== undefined;
   }
 
 }
