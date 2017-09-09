@@ -19,7 +19,7 @@ export class AuthenticationComponent implements OnInit {
   }
 
   doLogIn() {
-    console.log('user changed to', this.model.username);
+    this.model.password = '';
     this.onUserChanged.emit(this.model.username);
   }
 }

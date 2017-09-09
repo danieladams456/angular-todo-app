@@ -2,9 +2,7 @@
   <h1>{{ currentUsername }}'s ToDo Test App</h1>
 </div>
 
-<button (click)="isAuthVisibleToggle()">Log In</button>
-
-<app-authentication *ngIf="isAuthVisible" (onUserChanged)="currentUsername = $event"></app-authentication>
+<app-authentication *ngIf="!isAuthenticated" (onUserChanged)="currentUsername = $event"></app-authentication>
 
 <div class="row">
   <app-todo-list-viewer></app-todo-list-viewer>

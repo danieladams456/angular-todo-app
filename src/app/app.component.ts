@@ -7,20 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   currentUsername: string;
-  isAuthVisible: boolean;
 
   constructor() {
-    this.isAuthVisible = true;
   }
 
-  isAuthVisibleToggle() {
-    this.isAuthVisible = !this.isAuthVisible;
+  get isAuthenticated() {
+    return this.currentUsername != null && this.currentUsername !== '';
   }
-
-  onUserChanged(username: string) {
-    console.log('in root component on user changed method');
-    this.currentUsername = username;
-    this.isAuthVisible = username !== undefined;
-  }
-
 }
